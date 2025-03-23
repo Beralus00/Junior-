@@ -1,0 +1,67 @@
+/* Jeneral */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff6600, #ffcc00);
+    color: white;
+    padding: 20px;
+}
+
+/* Tit */
+h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Jwèt Tic-Tac-Toe */
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* Selil */
+.cell {
+    background: #ffffff;
+    color: black;
+    font-size: 2em;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Efè hover sou selil */
+.cell:hover {
+    background: #ffcc00;
+}
+
+/* Gayan */
+.winner {
+    background: #00cc66 !important;
+    color: white !important;
+}
+
+/* Bouton rekòmanse */
+#restart {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+#restart:hover {
+    background: darkred;
+}
