@@ -16,11 +16,12 @@ h1 {
 /* Jwèt Tic-Tac-Toe */
 #board {
     display: grid;
-    grid-template-columns: repeat(10, 60px);
-    grid-template-rows: repeat(6, 60px);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, auto);
     gap: 5px;
     justify-content: center;
     margin: 20px auto;
+    max-width: 90vw; /* Fè li adapte ak ekran telefòn */
 }
 
 /* Selil */
@@ -28,8 +29,7 @@ h1 {
     background: #ffffff;
     color: black;
     font-size: 2em;
-    height: 60px;
-    width: 60px;
+    aspect-ratio: 1 / 1; /* Fè kare otomatikman sou telefòn */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,4 +64,20 @@ h1 {
 
 #restart:hover {
     background: darkred;
+}
+
+/* 📱 Optimize pou telefòn */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #board {
+        grid-template-columns: repeat(6, 1fr); /* Fè li mwens laj sou ti ekran */
+        grid-template-rows: repeat(10, auto);
+    }
+
+    .cell {
+        font-size: 1.5em;
+    }
 }
